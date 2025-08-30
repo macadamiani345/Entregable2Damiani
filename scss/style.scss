@@ -1,0 +1,21 @@
+/*llamados a la carpeta utilities*/
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/animation";
+
+/*llamamos a la carpeta base*/
+@import "./base/reset";
+@import "./base/tipografias";
+
+/*llamamos a la carpeta layout*/
+
+@import "./layout/body";
+@import "./layout/header";
+@import "./layout/footer";
+
+/*llamamos a la carpeta components*/
+@import "./components/cards";
+@import "./components/carrusel";
+
+/*llamamos a la carpeta mediaQ*/
+@import "./mediaQ/_media";

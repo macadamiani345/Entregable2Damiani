@@ -1,0 +1,84 @@
+
+@import "../utilities/variables";
+
+header {
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        color: $color-texto-negro;
+        background-color: $color-fondo-seccion;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .variosEncabezado {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: auto 1fr auto; 
+            align-items: center;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 400;
+                text-align: left;
+                margin-right: 50px;
+            }
+
+            input {
+                padding: 8px;
+                width: 80%;
+                border: 1px solid $color-borde-input;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+
+                input:focus {
+                    border-color: $color-hover;
+                    outline: none;
+                }
+            }
+
+            img {
+                justify-self: end; 
+                cursor: pointer;
+            }
+        }
+    }
+
+    nav {
+        background-color: $color-fondo-seccion;
+        padding: 10px 0;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-texto-negro;
+                font-size: 17px;
+                transition: color 0.3s;
+
+                a:hover, a:focus {
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+
+}

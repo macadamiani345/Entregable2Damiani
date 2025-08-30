@@ -1,0 +1,79 @@
+
+@import "../utilities/variables";
+
+footer{
+    background-color: $color-fondo-seccion;
+    margin-top: 10px;
+    padding: 20px 0;
+
+    .footerContenedor {
+        max-width: 95%;
+        margin: 0 auto;
+
+        .footerRow {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .footerCol {
+                flex: 1;
+                max-width: 33%;
+                padding: 5px;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 14px;
+                    color: $color-texto-general;
+                }
+
+                form {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                    input[type="email"] {
+                        padding: 10px;
+                        margin-top: 5px;
+                        width: 100%;
+                        border: 1px solid $color-borde-input;
+                        border-radius: 5px;
+                        font-size: 12px;
+                        transition: border-color 0.3s;
+                    }
+
+                    input[type="email"]:focus {
+                        border-color: $color-hover;
+                        outline: none;
+                    }
+
+                    button {
+                        padding: 10px 20px;
+                        background-color: #ee99ac;
+                        border: none;
+                        border-radius: 5px;
+                        color: #FFF;
+                        font-size: 14px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        button:hover,button:focus {
+                            background-color: #6B6B6B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerFinal {
+        font-size: 12px;
+        color: $color-texto-general;
+        text-align: left;
+        padding-top: 20px;
+    }
+} 

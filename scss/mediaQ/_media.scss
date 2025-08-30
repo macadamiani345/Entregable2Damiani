@@ -1,0 +1,247 @@
+@media (max-width: 480px) {
+    header{
+        p {
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .variosEncabezado{
+            padding: 5px;
+            margin: 4px;
+
+            .contenedor {
+                h1{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+
+                input{
+                    font-size: 10px;
+                    padding: 2px;
+                }
+    
+                img {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+
+        nav{
+            padding: 3px;
+            ul li a{
+                font-size: 10px;
+            }
+        } 
+    }
+
+    .carrusel{
+        height: 120px;
+
+        ul li img{
+            height: 100%;
+        }
+    }
+
+    .textoAlineadoPrimero{
+        margin: 10px;
+        h2{
+            font-size: 14px;
+            padding: 3px;
+        }
+    
+        .contenedorProductos{
+            flex-direction: row;
+            gap: 5px;
+            margin-top: 5px;
+    
+            .item{
+                width: calc(50% - 10px);
+                padding: 10px;   
+                
+                h3{
+                    font-size: 12px;
+                }
+                .nombre{
+                    font-size: 10px;
+                }
+            
+                .precio{
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .extras{
+        flex-direction: column; 
+        align-items: center;
+        margin: 15px;
+        padding: 0px;
+
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .contenedorTexto {
+            padding-left: 0; 
+            text-align: center; 
+        }
+    
+        .contenedorTexto h1 {
+            font-size: 16px;
+            
+            form {
+                width: 100%; 
+                justify-content: center; 
+
+                input[type="text"] {
+                    font-size: 12px;
+                    width: 80%; 
+                    margin-bottom: 10px; 
+                }
+            
+                input[type="submit"] {
+                    font-size: 12px;
+                    width: 40%; 
+                    margin-top: 10px; 
+                }
+            }
+        }
+    }
+
+    .textoAlineado{
+        .titulos{
+            font-size: 18px;
+        }
+    
+        .contenedorProductos{
+            flex-direction: row;
+            gap: 5px;
+    
+            .item{
+                width: calc(50% - 10px);
+                padding: 4px;   
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .marca{
+                    font-size: 16px;
+                }
+            
+                .nombre{
+                    font-size: 14px;
+                }
+            
+                .precio{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .extras{
+        margin: 5px;
+        padding: 10px;
+
+        img{
+            max-width: 80%;
+        }
+        
+        .contenedorTexto {
+            h2{
+                font-size: 10px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+            
+            form {
+                gap: 5px;
+                input[type="email"] {
+                    font-size: 6px;
+                }
+                
+                input[type="submit"] {
+                    font-size: 5px;
+                }
+            }
+        }  
+    }
+
+    footer{
+        margin-top: 5px;
+        padding: 0;
+        .footerContenedor{
+            .footerRow {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+
+                .footerCol {
+                    max-width: 100%; 
+                    padding: 5px;
+
+                    h2{
+                        font-size: 10px;
+                    }
+
+                    p{
+                        font-size: 8px;
+                    }
+
+                    form{
+                        flex-direction: row;
+                        gap: 5px;
+
+                        input{
+                            padding: 5px;
+                            margin-top: 2px;
+                            font-size: 6px;
+                        }
+
+                        button{
+                            padding: 5px 5px;
+                            width: 20%;
+                            font-size: 7px;
+                        }
+                    }
+                }
+            }
+
+            .footerFinal{
+                padding-top: 5px;
+                p{
+                    font-size: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .footerRow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "col1 col2"
+        "form form"; 
+        gap: 20px;
+
+        .footerCol:nth-child(1) {
+        grid-area: col1;
+        }
+        .footerCol:nth-child(2) {
+        grid-area: col2;
+        }
+        .formCol {
+        grid-area: form;
+        }
+    }
+}
+
