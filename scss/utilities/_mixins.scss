@@ -22,7 +22,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        margin-top: 15px;
+        margin: 15px;
 
         .item {
             width: calc(100% / $itemsPorFila - 20px);

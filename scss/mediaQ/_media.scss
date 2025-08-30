@@ -2,11 +2,11 @@
     header{
         p {
             font-size: 12px;
-            padding: 5px;
+            padding: 7px;
         }
 
         .variosEncabezado{
-            padding: 5px;
+            padding: 8px;
             margin: 4px;
 
             .contenedor {
@@ -36,7 +36,7 @@
     }
 
     .carrusel{
-        height: 120px;
+        height: 130px;
 
         ul li img{
             height: 100%;
@@ -52,22 +52,31 @@
     
         .contenedorProductos{
             flex-direction: row;
-            gap: 5px;
-            margin-top: 5px;
+            gap: 10px;
+            margin: 10px;
     
             .item{
                 width: calc(50% - 10px);
-                padding: 10px;   
+                padding: 5px;   
                 
-                h3{
-                    font-size: 12px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 5px;
+                    display: block;    
+                    margin: 0 auto; 
                 }
+
+                h3{
+                    font-size: 14px;
+                }
+
                 .nombre{
-                    font-size: 10px;
+                    font-size: 12px;
                 }
             
                 .precio{
-                    font-size: 8px;
+                    font-size: 10px;
                 }
             }
         }
@@ -127,7 +136,7 @@
 
                 img{
                     width: 100%;
-                    height: auto;
+                    height: 20px;
                 }
     
                 .marca{
@@ -164,10 +173,12 @@
                 gap: 5px;
                 input[type="email"] {
                     font-size: 6px;
+                    padding: 5px;
                 }
                 
                 input[type="submit"] {
                     font-size: 5px;
+                    padding: 5px;
                 }
             }
         }  
@@ -198,15 +209,14 @@
                         flex-direction: row;
                         gap: 5px;
 
-                        input{
+                        input[type="email"] {
                             padding: 5px;
-                            margin-top: 2px;
+                            margin-top: 5px;
                             font-size: 6px;
                         }
 
-                        button{
+                        button[type="submit"]{
                             padding: 5px 5px;
-                            width: 20%;
                             font-size: 7px;
                         }
                     }
