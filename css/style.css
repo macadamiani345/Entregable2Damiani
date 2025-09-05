@@ -157,6 +157,36 @@ header nav ul a a:hover, header nav ul a a:focus {
   color: #FF9999;
 }
 
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form input[type=email] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+form input[type=email]:focus {
+  border-color: #FF9999;
+  outline: none;
+}
+form button[type=submit] {
+  padding: 10px 10px;
+  background-color: #ee99ac;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form button[type=submit] button:hover, form button[type=submit] button:focus {
+  background-color: #6B6B6B;
+}
+
 footer {
   background-color: #f7ced7;
   margin-top: 10px;
@@ -186,35 +216,8 @@ footer .footerContenedor .footerRow .footerCol p {
   font-size: 14px;
   color: #333;
 }
-footer .footerContenedor .footerRow .footerCol form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 footer .footerContenedor .footerRow .footerCol form input[type=email] {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 12px;
-  transition: border-color 0.3s;
-}
-footer .footerContenedor .footerRow .footerCol form input[type=email]:focus {
-  border-color: #FF9999;
-  outline: none;
-}
-footer .footerContenedor .footerRow .footerCol form button {
-  padding: 10px 20px;
-  background-color: #ee99ac;
-  border: none;
-  border-radius: 5px;
-  color: #FFF;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-footer .footerContenedor .footerRow .footerCol form button button:hover, footer .footerContenedor .footerRow .footerCol form button button:focus {
-  background-color: #6B6B6B;
 }
 footer .footerFinal {
   font-size: 12px;
@@ -224,108 +227,6 @@ footer .footerFinal {
 }
 
 /*llamamos a la carpeta components*/
-.textoAlineadoPrimero {
-  width: 90%;
-  text-align: left;
-  margin: 10px auto;
-  margin-top: 30px;
-}
-.textoAlineadoPrimero h2 {
-  font-size: 25px;
-  font-weight: 400;
-  text-align: center;
-  background-color: #f7ced7;
-  padding: 10px;
-  border-radius: 5px;
-}
-.textoAlineadoPrimero .contenedorProductos {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 10px 15px 15px 15px;
-}
-.textoAlineadoPrimero .contenedorProductos .item {
-  width: calc(20% - 20px);
-  padding: 10px;
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-.textoAlineadoPrimero .contenedorProductos .item:hover {
-  transform: translateY(-5px);
-}
-.textoAlineadoPrimero .contenedorProductos .item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-.textoAlineadoPrimero .contenedorProductos .item p {
-  text-align: left;
-}
-.textoAlineadoPrimero .contenedorProductos .item h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 5px 0;
-}
-.textoAlineadoPrimero .contenedorProductos .item .nombre {
-  font-size: 16px;
-  font-weight: 400;
-  color: #555;
-}
-.textoAlineadoPrimero .contenedorProductos .item .precio {
-  font-size: 14px;
-  font-weight: 400;
-  color: #222;
-}
-
-.extras {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  margin: 30px 30px 30px 30px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #F9F9F9;
-}
-.extras img {
-  max-width: 40%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-.extras .contenedorTexto h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 15px;
-}
-.extras .contenedorTexto form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.extras .contenedorTexto form input[type=email] {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: border-color 0.3s;
-  width: 100%;
-}
-.extras .contenedorTexto form input[type=submit] {
-  padding: 10px 20px;
-  background-color: #ee99ac;
-  border: none;
-  border-radius: 5px;
-  color: #FFF;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -382,6 +283,147 @@ footer .footerFinal {
   width: 100%;
   height: 460px;
   object-fit: cover;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form input[type=email] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+form input[type=email]:focus {
+  border-color: #FF9999;
+  outline: none;
+}
+form button[type=submit] {
+  padding: 10px 10px;
+  background-color: #ee99ac;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form button[type=submit] button:hover, form button[type=submit] button:focus {
+  background-color: #6B6B6B;
+}
+
+.extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin: 30px 30px 30px 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F9F9F9;
+}
+.extras img {
+  max-width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.extras .contenedorTexto h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+.extras .contenedorTexto form input[type=email] {
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form input[type=email] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+form input[type=email]:focus {
+  border-color: #FF9999;
+  outline: none;
+}
+form button[type=submit] {
+  padding: 10px 10px;
+  background-color: #ee99ac;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form button[type=submit] button:hover, form button[type=submit] button:focus {
+  background-color: #6B6B6B;
+}
+
+.textoAlineadoPrimero {
+  width: 90%;
+  text-align: left;
+  margin: 10px auto;
+  margin-top: 30px;
+}
+.textoAlineadoPrimero h2 {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #f7ced7;
+  padding: 10px;
+  border-radius: 5px;
+}
+.textoAlineadoPrimero .contenedorProductos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 15px 15px 15px;
+}
+.textoAlineadoPrimero .contenedorProductos .item {
+  width: calc(20% - 20px);
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.textoAlineadoPrimero .contenedorProductos .item:hover {
+  transform: translateY(-5px);
+}
+.textoAlineadoPrimero .contenedorProductos .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.textoAlineadoPrimero .contenedorProductos .item p {
+  text-align: left;
+}
+.textoAlineadoPrimero .contenedorProductos .item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.textoAlineadoPrimero .contenedorProductos .item .nombre {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+.textoAlineadoPrimero .contenedorProductos .item .precio {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
 }
 
 /*llamamos a la carpeta mediaQ*/
@@ -465,22 +507,19 @@ footer .footerFinal {
     padding-left: 0;
     text-align: center;
   }
-  .extras .contenedorTexto h1 {
+  .extras .contenedorTexto h2 {
     font-size: 16px;
   }
-  .extras .contenedorTexto h1 form {
+  .extras .contenedorTexto form {
     width: 100%;
     justify-content: center;
   }
-  .extras .contenedorTexto h1 form input[type=text] {
+  .extras .contenedorTexto form input[type=text] {
     font-size: 12px;
     width: 80%;
-    margin-bottom: 10px;
   }
-  .extras .contenedorTexto h1 form input[type=submit] {
-    font-size: 12px;
-    width: 40%;
-    margin-top: 10px;
+  .extras .contenedorTexto form button[type=submit] {
+    font-size: 9px;
   }
   .textoAlineado .titulos {
     font-size: 18px;
@@ -525,9 +564,9 @@ footer .footerFinal {
     font-size: 6px;
     padding: 5px;
   }
-  .extras .contenedorTexto form input[type=submit] {
+  .extras .contenedorTexto form button {
     font-size: 5px;
-    padding: 5px;
+    padding: 5px 5px;
   }
   footer {
     margin-top: 5px;
@@ -551,10 +590,10 @@ footer .footerFinal {
   footer .footerContenedor .footerRow .footerCol form {
     flex-direction: row;
     gap: 5px;
+    margin-top: 5px;
   }
   footer .footerContenedor .footerRow .footerCol form input[type=email] {
     padding: 5px;
-    margin-top: 5px;
     font-size: 6px;
   }
   footer .footerContenedor .footerRow .footerCol form button[type=submit] {
@@ -627,7 +666,7 @@ footer .footerFinal {
     padding: 8px;
     width: 80%;
   }
-  .extras .contenedorTexto form input[type=submit] {
+  .extras .contenedorTexto form button[type=submit] {
     font-size: 10px;
     padding: 8px;
     width: 20%;
@@ -721,7 +760,7 @@ footer .footerFinal {
     padding: 10px;
     width: 70%;
   }
-  .extras .contenedorTexto form input[type=submit] {
+  .extras .contenedorTexto form button[type=submit] {
     font-size: 12px;
     padding: 10px;
     width: 25%;

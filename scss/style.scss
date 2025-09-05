@@ -9,13 +9,15 @@
 
 /*llamamos a la carpeta layout*/
 
-@import "./layout/body";
 @import "./layout/header";
 @import "./layout/footer";
 
 /*llamamos a la carpeta components*/
-@import "./components/cards";
+@import "./components/buttons";
 @import "./components/carrusel";
+@import "./components/extras";
+@import "./components/forms";
+@import "./components/productstitle";
 
 /*llamamos a la carpeta mediaQ*/
 @import "./mediaQ/_media";
