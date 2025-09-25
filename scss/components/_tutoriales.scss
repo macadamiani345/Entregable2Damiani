@@ -1,3 +1,5 @@
+@import "../utilities/variables";
+
 .contenedorTutoriales{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,7 +18,7 @@
         p {
             text-align: left;
             font-size: 16px;
-            color: #333;
+            color: $color-texto-general;
         }
     }
 }

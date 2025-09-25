@@ -1,16 +1,6 @@
 /*llamados a la carpeta utilities*/
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes slide {
   0% {
     margin-left: 0;
@@ -37,6 +27,62 @@
     margin-left: -300%;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aparecerAbajo {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.aparecerIzquierda {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aparecerArriba {
+  animation: fadeInFromTop 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.aparecerDerecha {
+  animation: fadeInRight 1s ease-in-out;
+}
+
 /*llamamos a la carpeta base*/
 * {
   margin: 0;
@@ -208,16 +254,107 @@ footer .footerFinal {
   transition: background-color 0.3s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.resumenCompra {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 25px;
+  max-width: 80%;
+  border-radius: 12px;
+  background-color: #FFFDEC;
 }
+.resumenCompra .listadoProductosCarrito {
+  flex: 2;
+}
+.resumenCompra .listadoProductosCarrito h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.resumenCompra .listadoProductosCarrito ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.resumenCompra .listadoProductosCarrito ul li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  gap: 6px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #555;
+}
+.resumenCompra .listadoProductosCarrito ul li button {
+  margin-left: 2px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f7ced7;
+  color: #333;
+  transition: background 0.3s;
+}
+.resumenCompra .listadoProductosCarrito ul li button:hover {
+  background: rgb(239.8421052632, 162.1578947368, 179.2105263158);
+}
+.resumenCompra .listadoProductosCarrito #vaciarCarrito {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #ffefef;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.resumenCompra .listadoProductosCarrito #vaciarCarrito:hover {
+  background: #f7ced7;
+}
+.resumenCompra .totalCompraCarrito {
+  flex: 1;
+  padding: 20px;
+  border-left: 1px solid #eee;
+}
+.resumenCompra .totalCompraCarrito p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+.resumenCompra .totalCompraCarrito #comprar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f7ced7;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.resumenCompra .totalCompraCarrito #comprar:hover {
+  background: rgb(239.8421052632, 162.1578947368, 179.2105263158);
+}
+
+.productosExtrasCarrito {
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  margin: 20px;
+}
+
 @keyframes slide {
   0% {
     margin-left: 0;
@@ -244,6 +381,62 @@ footer .footerFinal {
     margin-left: -300%;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aparecerAbajo {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.aparecerIzquierda {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aparecerArriba {
+  animation: fadeInFromTop 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.aparecerDerecha {
+  animation: fadeInRight 1s ease-in-out;
+}
+
 .carrusel {
   width: 100%;
   margin: 0px auto;
@@ -353,7 +546,7 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
 .primeraYTerceraTabla {
   background-color: #f7ced7;
   padding: 20px;
-  margin: 20px auto;
+  margin: 30px auto;
   width: 90%;
   display: flex;
   justify-content: center;
@@ -364,40 +557,50 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   justify-content: space-between;
   gap: 20px;
 }
-.primeraYTerceraTabla .columna {
+.primeraYTerceraTabla .fila .columnaTexto {
   padding: 20px;
-}
-.primeraYTerceraTabla .texto {
   flex: 2;
 }
-.primeraYTerceraTabla .imagen {
+.primeraYTerceraTabla .fila .columnaTexto h2 {
+  font-size: 26px;
+}
+.primeraYTerceraTabla .fila .columnaTexto p {
+  font-size: 18px;
+}
+.primeraYTerceraTabla .fila .columnaImagen {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.primeraYTerceraTabla .imagen img {
+.primeraYTerceraTabla .fila .columnaImagen img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-.primeraYTerceraTabla h2 {
-  font-size: 28px;
 }
 
 .segundaTabla {
   margin: 0 auto;
   width: 80%;
 }
-.segundaTabla span {
+.segundaTabla div {
+  margin: 30px;
+}
+.segundaTabla div p {
+  font-size: 18px;
+}
+.segundaTabla div p span {
   color: #f7ced7;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   margin-right: 10px;
 }
 
 .soloCentrar {
   text-align: center;
+}
+.soloCentrar p {
+  padding: 5px;
 }
 
 .alineacionProductos {
