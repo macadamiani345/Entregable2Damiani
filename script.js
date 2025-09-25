@@ -1,117 +1,181 @@
-let nombreUsuario = "";
-let descuentoActivo = false;
-
-// Objeto que unifica todas las categorías de productos
 const productos = {
     base: [
-        { nombre: "Flawless Filter Charlotte Tilbury", precio: 49 },
-        { nombre: "Airbrush Flawless Charlotte Tilbury", precio: 49 },
-        { nombre: "Backstage Face & Body Dior", precio: 45 },
-        { nombre: "Forever Skin Perfect 24H Multi-Use Dior", precio: 57 },
-        { nombre: "SurrealSkin® Luminous Hydrating By Mario", precio: 48 },
-        { nombre: "Positive Light Tinted Rare Beauty", precio: 30 }
+        { marca: "Charlotte Tilbury" , nombre: "Flawless Filter Charlotte Tilbury", precio: 49.00 },
+        { marca: "Charlotte Tilbury", nombre: "Airbrush Flawless Charlotte Tilbury", precio: 49.00 },
+        { marca: "Dior Beauty", nombre: "Backstage Face & Body Dior", precio: 45.00 },
+        { marca: "Dior Beauty", nombre: "Forever Skin Perfect 24H Multi-Use Dior", precio: 57.00 },
+        { marca: "Make Up by Mario", nombre: "SurrealSkin® Luminous Hydrating By Mario", precio: 48.00 },
+        { marca: "Patrick Ta", nombre: "Major Skin Crème Foundation and Finishing Powder Duo", precio: 52.00 },
+        { marca: "Rare Beauty", nombre: "Positive Light Tinted Rare Beauty", precio: 30.00 }
     ],
     bronzer: [
-        { nombre: "Beautiful Skin Sun-Kissed Glow Cream Charlotte Tilbury", precio: 58 },
-        { nombre: "Forever Nude Jumbo Dior", precio: 54 },
-        { nombre: "SoftSculpt® Cream By Mario", precio: 34 },
-        { nombre: "SoftSculpt® Talc-Free Blurring By Mario", precio: 38 },
-        { nombre: "Softsculpt® Multi-Use By Mario", precio: 36 },
-        { nombre: "Warm Wishes Effortless Cream Rare Beauty", precio: 28 },
-        { nombre: "Soft Pinch Liquid Rare Beauty", precio: 28 }
+        { marca: "Charlotte Tilbury", nombre: "Beautiful Skin Sun-Kissed Glow Cream Charlotte Tilbury", precio: 58.00 },
+        { marca: "Dior Beauty", nombre: "Forever Nude Jumbo Dior", precio: 54.00 },
+        { marca: "Make Up by Mario", nombre: "SoftSculpt® Cream Contour & Bronzer Shaping Stick®", precio: 34.00 },
+        { marca: "Make Up by Mario", nombre: "SoftSculpt Transforming Skin Enhancer®", precio: 34.00 },
+        { marca: "Make Up by Mario", nombre: "Softsculpt® Multi-Use Bronzing & Shaping Serum with Hyaluronic Acid", precio: 36.00 },
+        { marca: "Rare Beauty", nombre: "Warm Wishes Effortless Cream Rare Beauty", precio: 28.00 },
+        { marca: "Rare Beauty", nombre: "Soft Pinch Liquid Rare Beauty", precio: 28.00 }
     ],
     corrector: [
-        { nombre: "Beautiful Skin Medium to Full Coverage Charlotte Tilbury", precio: 33 },
-        { nombre: "Forever Skin Correct Full-Coverage Dior", precio: 42 },
-        { nombre: "Backstage Dior", precio: 33 },
-        { nombre: "SurrealSkin® Awakening By Mario", precio: 29 },
-        { nombre: "Liquid Touch Brightening Rare Beauty", precio: 24 }
+        { marca: "Charlotte Tilbury", nombre: "Beautiful Skin Medium to Full Coverage Charlotte Tilbury", precio: 33.00 },
+        { marca: "Dior Beauty", nombre: "Forever Skin Correct Full-Coverage Dior", precio: 42.00 },
+        { marca: "Dior Beauty", nombre: "Backstage Dior", precio: 33.00 },
+        { marca: "Make Up by Mario", nombre: "SurrealSkin® Awakening By Mario", precio: 29.00 },
+        { marca: "Rare Beauty", nombre: "Liquid Touch Brightening Rare Beauty", precio: 24.00 }
     ],
     rubor: [
-        { nombre: "Matte Beauty Charlotte Tilbury", precio: 42 },
-        { nombre: "Rosy Glow Powder Dior", precio: 42 },
-        { nombre: "Soft Pop Cream By Mario", precio: 34 },
-        { nombre: "Soft Pop Powder By Mario", precio: 32 },
-        { nombre: "Soft Pop Plumping Cream By Mario", precio: 34 },
-        { nombre: "Major Headlines Double-Take Crème & Powder Patrick Ta", precio: 38 },
-        { nombre: "Soft Pinch Liquid Rare Beauty", precio: 25 },
-        { nombre: "Stay Vulnerable Melting Cream Rare Beauty", precio: 24 }
+        { marca: "Charlotte Tilbury", nombre: "Matte Beauty Charlotte Tilbury", precio: 42.00 },
+        { marca: "Dior Beauty", nombre: "Rosy Glow Powder Dior", precio: 42.00 },
+        { marca: "Make Up by Mario", nombre: "Soft Pop Cream Blush Stick", precio: 34.00 },
+        { marca: "Make Up by Mario", nombre: "Soft Pop Powder Blush", precio: 32.00 },
+        { marca: "Make Up by Mario", nombre: "Soft Pop Plumping Cream Blush Veil", precio: 34.00 },
+        { marca: "Patrick Ta", nombre: "Major Headlines Double-Take Crème & Powder Patrick Ta", precio: 38.00 },
+        { marca: "Rare Beauty", nombre: "Soft Pinch Liquid Rare Beauty", precio: 25.00 },
+        { marca: "Rare Beauty", nombre: "Stay Vulnerable Melting Cream Rare Beauty", precio: 24.00 }
     ],
     sombras: [
-        { nombre: "Luxury Eyeshadow Palette Charlotte Tilbury", precio: 55 },
-        { nombre: "Diorshow 5 Couleurs Couture Eyeshadow Palette Dior", precio: 72 },
-        { nombre: "Master Mattes® Eyeshadow Palette By Mario", precio: 56 },
-        { nombre: "Major Dimension III Matte Eyeshadow Palette Patrick Ta", precio: 70 }
+        { marca: "Charlotte Tilbury", nombre: "Luxury Eyeshadow Palette Charlotte Tilbury", precio: 55.00 },
+        { marca: "Dior Beauty", nombre: "Diorshow 5 Couleurs Couture Eyeshadow Palette Dior", precio: 72.00 },
+        { marca: "Make Up by Mario", nombre: "Master Mattes® Eyeshadow Palette By Mario", precio: 56.00 },
+        { marca: "Patrick Ta", nombre: "Major Dimension III Matte Eyeshadow Palette Patrick Ta", precio: 70.00 },
+        { marca: "Patrick Ta", nombre: "Major Dimension Eye Illusion Eyeshadow Duo", precio: 42.00 },
     ]
 };
 
-// Pedir nombre del usuario
-function pedirNombre() {
-    nombreUsuario = prompt("¡Bienvenida a Beauty Bar! \n¿Cuál es tu nombre?");
-    if (!nombreUsuario) {
-        nombreUsuario = "Invitada";
-    }
-    alert("Hola " + nombreUsuario + "!");
+//
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function mostrarMensaje(texto) {
+    let mensaje = document.createElement("div");
+    mensaje.className = "mensaje-carrito";
+    mensaje.innerText = texto;
+
+    document.body.appendChild(mensaje);
+
+    setTimeout(() => {
+        mensaje.remove();
+    }, 5000);
 }
 
-// Ofrecer descuento
-function ofrecerDescuento() {
-    descuentoActivo = confirm("Hola " + nombreUsuario + ", tenemos un 20% de descuento en tu primera compra. ¿Quieres aprovecharlo?");
-    if (descuentoActivo) {
-        alert("¡Genial! Tu descuento del 20% está activado");
-        console.log(nombreUsuario + " aceptó el descuento.");
+function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+//actualiza el contador en el ícono
+function actualizarContadorCarrito() {
+    const contador = document.getElementById("contadorCarrito");
+    if (contador) {
+        const totalItems = carrito.reduce((sum, p) => sum + p.cantidad, 0);
+        contador.innerText = totalItems;
+    }
+}
+
+//agrega un producto al carrito
+function agregarProducto(nombre, precio) {
+    const productoExistente = carrito.find(p => p.nombre === nombre);
+    if (productoExistente) {
+        productoExistente.cantidad++;
     } else {
-        alert("No hay problema, " + nombreUsuario + ". ¡Disfruta tu experiencia en Beauty Bar!");
-        console.log(nombreUsuario + " no quiso el descuento.");
+        carrito.push({ nombre, precio, cantidad: 1 });
     }
-}
+    guardarCarrito();
+    actualizarContadorCarrito();
 
-// Pedir categoría
-function pedirCategoria() {
-    let categoria = prompt("¿Qué clase de producto estás buscando? (Escribe: base, bronzer, corrector, rubor, sombras o 'salir o cancelar' para finalizar)").toLowerCase();
-    return categoria;
-}
-
-// Mostrar productos de una categoría
-function mostrarProductos(categoria) {
-    if (categoria == "salir") {
-        return false; 
-    }
-
-    if (!productos[categoria]) {
-        alert("No tenemos la categoría '" + categoria + "'. Por favor, elige entre: " + Object.keys(productos).join(", "));
-        return true;
-    }
-
-    let mensaje = "Estos son los productos disponibles en " + categoria + ":\n";
-    let lista = productos[categoria];
-    for (let i = 0; i < lista.length; i++) {
-        let precio;
-        if (descuentoActivo) {
-            precio = (lista[i].precio * 0.8).toFixed(2); 
-        } else {
-            precio = lista[i].precio;
-        }
-        mensaje = mensaje + (i + 1) + ". " + lista[i].nombre + " - $" + precio + "\n";
-    }
-
-    alert(mensaje);
-    return true; 
-}
-
-// Simulador principal
-function simuladorBienvenida() {
-    pedirNombre();
-    ofrecerDescuento();
-    
-    let continuar = true;
-    while (continuar) {
-        let categoriaElegida = pedirCategoria();
-        continuar = mostrarProductos(categoriaElegida);
+    if (document.getElementById("listaCarrito")) {
+        mostrarCarrito();
     }
     
-    alert("Gracias por visitar Beauty Bar, " + nombreUsuario + "!");
+    mostrarMensaje(`${nombre} agregado al carrito 🛒`);
 }
 
-// Iniciar el simulador
-simuladorBienvenida();
+//muestra el carrito en carrito.html
+function mostrarCarrito() {
+    const lista = document.getElementById("listaCarrito");
+    const total = document.getElementById("totalCarrito");
+    if (!lista || !total) return;
+
+    lista.innerHTML = "";
+    let suma = 0;
+
+    carrito.forEach((p, index) => {
+        suma += p.precio * p.cantidad;
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${p.nombre} - $${p.precio} x ${p.cantidad}
+            <button onclick="eliminarProducto(${index})">-</button>
+            <button onclick="agregarProductoCarrito(${index})">+</button>
+        `;
+        lista.appendChild(li);
+    });
+
+    total.innerText = "Total: $" + suma.toFixed(2);
+}
+
+// resta un producto o elimina si queda en 0
+function eliminarProducto(indice) {
+    if (carrito[indice].cantidad > 1) {
+        carrito[indice].cantidad--;
+    } else {
+        carrito.splice(indice, 1);
+    }
+    guardarCarrito();
+    mostrarCarrito();
+    actualizarContadorCarrito();
+}
+
+// suma un producto directamente en carrito.html
+function agregarProductoCarrito(indice) {
+    carrito[indice].cantidad++;
+    guardarCarrito();
+    mostrarCarrito();
+    actualizarContadorCarrito();
+}
+
+//vacia el carrito completo
+function configurarVaciarCarrito() {
+    const vaciarBtn = document.getElementById("vaciarCarrito");
+    if (vaciarBtn) {
+        vaciarBtn.addEventListener("click", () => {
+            carrito = [];
+            guardarCarrito();
+            mostrarCarrito();
+            actualizarContadorCarrito();
+        });
+    }
+}
+
+//compra el carrito
+function configurarCompra() {
+    const comprarBtn = document.querySelector("button.comprar");
+    if (comprarBtn) {
+        comprarBtn.addEventListener("click", () => {
+            if (carrito.length === 0) {
+                mostrarMensaje("Tu carrito está vacío 😅");
+            } else {
+                carrito = [];
+                guardarCarrito();
+                mostrarCarrito();
+                actualizarContadorCarrito();
+                alert("¡Gracias por tu compra! 🛒✨");
+            }
+        });
+    }
+}
+
+//inicialización
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".agregarProductoCarrito").forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const item = e.target.closest(".item");
+            const nombre = item.querySelector(".nombre").innerText;
+            const precio = parseFloat(item.querySelector(".precio").innerText.replace("$", ""));
+            agregarProducto(nombre, precio);
+        });
+    });
+
+    mostrarCarrito();
+    configurarVaciarCarrito();
+    configurarCompra();
+    actualizarContadorCarrito();
+});

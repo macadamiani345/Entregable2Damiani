@@ -1,0 +1,22 @@
+.contenedorTutoriales{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    .video{
+        text-align: center;
+        padding: 15px;
+    
+        iframe {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        p {
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+    }
+}

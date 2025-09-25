@@ -9,7 +9,9 @@
         <title>Beauty Bar</title>
         <link rel="shortcut icon" href="./assets/img/icono.png">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     </head>
+
     <body>
         <header>
             <section>
@@ -21,11 +23,20 @@
                     <div class="fuenteLogo">
                         <h1>Beauty Bar</h1>
                     </div>
-                    <div>
-                        <input type="search" id="search" placeholder="Buscar..." aria-label="Buscar productos">
+                    <div class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                     <div>
-                        <img src="./assets/img/carrito.png" alt="Ícono de carrito de compras" width="25" height="25">
+                        <a href="./pages/carrito.html">
+                            <img src="./assets/img/carrito.png" alt="Ícono de carrito de compras" width="25" height="25">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -62,74 +73,84 @@
                 </div>
             </section>
 
-            <section class="textoAlineadoPrimero">
+            <section class="alineacionProductos">
                 <h2>Productos Nuevos</h2>
                 <div class="contenedorProductos"> 
                     <div class="item item1">
                         <img src="./assets/img/productos/correctores/correctormario.jpg" alt="Corrector SurrealSkin de Make-Up by Mario">
                         <h3>Make-Up by Mario</h3>
-                        <p class="nombre">SurrealSkin™ Awakening Concealer</p>
+                        <p class="nombre">Corrector SurrealSkin™ Awakening</p>
                         <p class="precio">$29.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item2">
                         <img src="./assets/img/productos/rubores/ruborPT.jpg" alt="Dúo de rubor en crema y polvo Double-Take de Major Headlines">
                         <h3>Patrick Ta</h3>
-                        <p class="nombre">Double-Take Crème & Powder Blush Duo</p>
+                        <p class="nombre">Rubor Doble en Crema y en Polvo</p>
                         <p class="precio">$38.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item3">
                         <img src="./assets/img/productos/bronzers/bronzerCT.jpg" alt="Bronceador Beautiful Skin de Charlotte Tilbury">
                         <h3>Charlotte Tilbury</h3>
-                        <p class="nombre">Beautiful Skin Sun-Kissed Glow Cream Bronzer</p>
+                        <p class="nombre">Bronzer Beautiful Skin Sun-Kissed Glow</p>
                         <p class="precio">$58.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item4">
                         <img src="./assets/img/productos/bases/basedior.jpg" alt="Base Backstage de Dior Beauty">
                         <h3>Dior Beauty</h3>
-                        <p class="nombre">Backstage Face & Body Foundation</p>
+                        <p class="nombre">Base Backstage Face & Body</p>
                         <p class="precio">$43.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item5">
                         <img src="./assets/img/productos/sombras/sombrasPT.jpg" alt="Paleta de sombras de ojos mate Major Dimension III">
                         <h3>Patrick Ta</h3>
-                        <p class="nombre">Major Dimension III Matte Eyeshadow Palette</p>
+                        <p class="nombre">Paleta de Sombras Major Dimension III Matte</p>
                         <p class="precio">$70.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                 </div>
             </section>
 
-            <section class="textoAlineadoPrimero">
+            <section class="alineacionProductos">
                 <h2>Los Más Vendidos</h2>
                 <div class="contenedorProductos">
                     <div class="item item1">
                         <img src="./assets/img/productos/rubores/ruborRB.jpg" alt="Rubor Soft Pinch de Rare Beauty">
                         <h3>Rare Beauty</h3>
-                        <p class="nombre">Soft Pinch Liquid Blush</p>
+                        <p class="nombre">Rubor Líquido Soft Pinch</p>
                         <p class="precio">$25.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item2">
                         <img src="./assets/img/productos/correctores/correctordior.jpg" alt="Corrector Backstage de Dior Beauty">
                         <h3>Dior Beauty</h3>
-                        <p class="nombre">Backstage Concealer</p>
+                        <p class="nombre">Corrector Backstage</p>
                         <p class="precio">$32.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item3">
                         <img src="./assets/img/productos/sombras/sombrasmario.jpg" alt="Paleta Master Mattes de Make-Up by Mario">
                         <h3>Make-Up by Mario</h3>
-                        <p class="nombre">Master Mattes® Eyeshadow Palette</p>
+                        <p class="nombre">Sombra de Ojos Master Mattes®</p>
                         <p class="precio">$59.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item4">
                         <img src="./assets/img/productos/bronzers/bronzerRB.jpg" alt="Bronceador Warm Wishes de Rare Beauty">
                         <h3>Rare Beauty</h3>
-                        <p class="nombre">Warm Wishes Effortless Cream Bronzer Stick</p>
+                        <p class="nombre">Bronzer en Stick Warm Wishes Effortless</p>
                         <p class="precio">$28.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                     <div class="item item5">
                         <img src="./assets/img/productos/bases/baseCT.jpg" alt="Base Hollywood Flawless Filter de Charlotte Tilbury">
                         <h3>Charlotte Tilbury</h3>
-                        <p class="nombre">Hollywood Flawless Filter</p>
+                        <p class="nombre">Base Hollywood Flawless Filter</p>
                         <p class="precio">$49.00</p>
+                        <button type="button" class="agregarProductoCarrito">Agregar al Carrito</button>
                     </div>
                 </div>      
             </section>

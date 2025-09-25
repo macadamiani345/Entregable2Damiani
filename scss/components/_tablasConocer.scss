@@ -1,0 +1,58 @@
+@import "../utilities/variables";
+
+.primeraYTerceraTabla {
+    background-color: $color-fondo-seccion;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    display: flex; 
+    justify-content: center;
+
+    .fila {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .columna {
+        padding: 20px;
+    }
+
+    .texto {
+        flex: 2; 
+    }
+
+    .imagen {
+        flex: 1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+.segundaTabla{
+    margin: 0 auto; 
+    width: 80%; 
+
+    span {
+        color: $color-fondo-seccion;
+        font-size: 24px; 
+        font-weight: bold; 
+        margin-right: 10px; 
+    }
+}
+
+.soloCentrar{
+    text-align: center;
+}

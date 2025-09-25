@@ -37,42 +37,6 @@
     margin-left: -300%;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slide {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
 /*llamamos a la carpeta base*/
 * {
   margin: 0;
@@ -116,6 +80,10 @@ header .variosEncabezado .contenedor h1 {
   font-weight: 400;
   text-align: left;
   margin-right: 50px;
+}
+header .variosEncabezado .contenedor h1 a {
+  color: #000000;
+  text-decoration: none;
 }
 header .variosEncabezado .contenedor input {
   padding: 8px;
@@ -227,6 +195,19 @@ footer .footerFinal {
 }
 
 /*llamamos a la carpeta components*/
+.agregarProductoCarrito {
+  color: #333;
+  padding: 10px;
+  background-color: #f7ced7;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  display: block;
+  margin: 10px auto 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -369,13 +350,64 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   background-color: #6B6B6B;
 }
 
-.textoAlineadoPrimero {
+.primeraYTerceraTabla {
+  background-color: #f7ced7;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.primeraYTerceraTabla .fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.primeraYTerceraTabla .columna {
+  padding: 20px;
+}
+.primeraYTerceraTabla .texto {
+  flex: 2;
+}
+.primeraYTerceraTabla .imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primeraYTerceraTabla .imagen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.primeraYTerceraTabla h2 {
+  font-size: 28px;
+}
+
+.segundaTabla {
+  margin: 0 auto;
+  width: 80%;
+}
+.segundaTabla span {
+  color: #f7ced7;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.soloCentrar {
+  text-align: center;
+}
+
+.alineacionProductos {
   width: 90%;
   text-align: left;
   margin: 10px auto;
   margin-top: 30px;
+  margin-top: 30px;
 }
-.textoAlineadoPrimero h2 {
+.alineacionProductos h2 {
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -383,7 +415,7 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   padding: 10px;
   border-radius: 5px;
 }
-.textoAlineadoPrimero .contenedorProductos {
+.alineacionProductos .contenedorProductos {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -391,7 +423,7 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   gap: 20px;
   margin: 10px 15px 15px 15px;
 }
-.textoAlineadoPrimero .contenedorProductos .item {
+.alineacionProductos .contenedorProductos .item {
   width: calc(20% - 20px);
   padding: 10px;
   background-color: #FFFFFF;
@@ -399,31 +431,96 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-.textoAlineadoPrimero .contenedorProductos .item:hover {
+.alineacionProductos .contenedorProductos .item:hover {
   transform: translateY(-5px);
 }
-.textoAlineadoPrimero .contenedorProductos .item img {
+.alineacionProductos .contenedorProductos .item img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
-.textoAlineadoPrimero .contenedorProductos .item p {
+.alineacionProductos .contenedorProductos .item p {
   text-align: left;
 }
-.textoAlineadoPrimero .contenedorProductos .item h3 {
+.alineacionProductos .contenedorProductos .item h3 {
   font-size: 18px;
   font-weight: 600;
   margin: 5px 0;
 }
-.textoAlineadoPrimero .contenedorProductos .item .nombre {
+.alineacionProductos .contenedorProductos .item .nombre {
   font-size: 16px;
   font-weight: 400;
   color: #555;
 }
-.textoAlineadoPrimero .contenedorProductos .item .precio {
+.alineacionProductos .contenedorProductos .item .precio {
   font-size: 14px;
   font-weight: 400;
   color: #222;
+}
+
+.tituloPagina {
+  font-size: 30px;
+  padding: 15px;
+  text-align: center;
+  background-color: #f7ced7;
+  margin: 20px;
+}
+
+.contenedorTutoriales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.contenedorTutoriales .video {
+  text-align: center;
+  padding: 15px;
+}
+.contenedorTutoriales .video iframe {
+  width: 100%;
+  border-radius: 5px;
+}
+.contenedorTutoriales .video p {
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.ubicacion {
+  width: 90%;
+  text-align: center;
+  margin: 40px auto;
+}
+.ubicacion .contenedorTienda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.ubicacion .contenedorTienda .info {
+  text-align: center;
+  padding: 20px;
+}
+.ubicacion .contenedorTienda .info p {
+  font-size: 16px;
+  color: #333;
+}
+.ubicacion .contenedorTienda .info img {
+  border-radius: 5%;
+  width: 100%;
+}
+.ubicacion .contenedorTienda .mapa {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+}
+.ubicacion .contenedorTienda .mapa iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  border: none;
+  border-radius: 5px;
 }
 
 /*llamamos a la carpeta mediaQ*/
@@ -440,9 +537,13 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
     font-size: 20px;
     margin-right: 10px;
   }
-  header .variosEncabezado .contenedor input {
+  header .variosEncabezado .contenedor form input {
     font-size: 10px;
     padding: 2px;
+  }
+  header .variosEncabezado .contenedor form button {
+    font-size: 8px;
+    padding: 5px 5px;
   }
   header .variosEncabezado .contenedor img {
     width: 13px;
@@ -460,36 +561,36 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   .carrusel ul li img {
     height: 100%;
   }
-  .textoAlineadoPrimero {
+  .alineacionProductos {
     margin: 10px;
   }
-  .textoAlineadoPrimero h2 {
+  .alineacionProductos h2 {
     font-size: 14px;
     padding: 3px;
   }
-  .textoAlineadoPrimero .contenedorProductos {
+  .alineacionProductos .contenedorProductos {
     flex-direction: row;
     gap: 10px;
     margin: 10px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item {
+  .alineacionProductos .contenedorProductos .item {
     width: calc(50% - 10px);
     padding: 5px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item img {
+  .alineacionProductos .contenedorProductos .item img {
     width: 100px;
     height: 100px;
     border-radius: 5px;
     display: block;
     margin: 0 auto;
   }
-  .textoAlineadoPrimero .contenedorProductos .item h3 {
+  .alineacionProductos .contenedorProductos .item h3 {
     font-size: 14px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item .nombre {
+  .alineacionProductos .contenedorProductos .item .nombre {
     font-size: 12px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item .precio {
+  .alineacionProductos .contenedorProductos .item .precio {
     font-size: 10px;
   }
   .extras {
@@ -618,28 +719,28 @@ form button[type=submit] button:hover, form button[type=submit] button:focus {
   .carrusel ul li img {
     height: 100%;
   }
-  .textoAlineadoPrimero .contenedorProductos {
+  .alineacionProductos .contenedorProductos {
     flex-direction: row;
     gap: 10px;
     margin: 10px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item {
+  .alineacionProductos .contenedorProductos .item {
     width: calc(33.33% - 10px);
   }
-  .textoAlineadoPrimero .contenedorProductos .item img {
+  .alineacionProductos .contenedorProductos .item img {
     width: 100px;
     height: 100px;
     border-radius: 5px;
     display: block;
     margin: 0 auto;
   }
-  .textoAlineadoPrimero .contenedorProductos .item h3 {
+  .alineacionProductos .contenedorProductos .item h3 {
     font-size: 16px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item .nombre {
+  .alineacionProductos .contenedorProductos .item .nombre {
     font-size: 14px;
   }
-  .textoAlineadoPrimero .contenedorProductos .item .precio {
+  .alineacionProductos .contenedorProductos .item .precio {
     font-size: 12px;
   }
   .extras {

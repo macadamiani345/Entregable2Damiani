@@ -30,6 +30,11 @@ header {
                 font-weight: 400;
                 text-align: left;
                 margin-right: 50px;
+
+                a{
+                    color:$color-texto-negro;
+                    text-decoration: none;
+                }
             }
 
             input {
