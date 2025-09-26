@@ -3,40 +3,46 @@
 .ubicacion {
     width: 90%;
     text-align: center;
-    margin: 40px auto;
-    
+    justify-content: center;
+    margin: 40px auto 40px auto;
+
     .contenedorTienda {
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 20px;
 
-        .info{
+        .info {
+            flex: 1;
             text-align: center;
             padding: 20px;
+            margin: 20px;
 
             p {
                 font-size: 16px;
                 color: $color-texto-general;
+                margin: 10px;
             }
-    
-            img{
-                border-radius: 5%;
+
+            img {
                 width: 100%;
+                height: auto;
+                border-radius: 5%;
+                margin: auto;
             }
-        }   
-    
+        }
+
         .mapa {
-            flex: 1.5; 
+            flex: 1.5;
+            min-width: 300px;
             display: flex;
             justify-content: center;
+            align-items: center;
 
             iframe {
                 width: 100%;
-                max-width: 700px; 
-                height: 450px;
-                border: none;
+                aspect-ratio: 16/9;
                 border-radius: 5px;
             }
         }

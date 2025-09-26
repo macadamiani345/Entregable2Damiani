@@ -18,8 +18,10 @@
     }
     
     .contenedorTexto {
+        padding: 20px;
+
         h2{
-            font-size: 2em;
+            font-size: 28px;
             color: $color-texto-general;
             margin-bottom: 15px;
         }

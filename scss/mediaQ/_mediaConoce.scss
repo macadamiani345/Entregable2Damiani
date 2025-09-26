@@ -1,0 +1,135 @@
+@media (max-width: 500px) {
+    .primeraYTerceraTabla {
+        padding: 10px;
+        margin: 10px auto;
+
+        .fila {
+            gap: 10px;
+
+            .columnaTexto {
+                padding: 10px; 
+
+                h2 {
+                    font-size: 16px;
+                }
+
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .segundaTabla{
+        
+        div{
+            margin: 10px;
+
+            p{
+                font-size: 10px;
+
+                span {
+                    font-size: 16px; 
+                    margin-right: 5px; 
+                }
+            }
+        }
+    }
+
+    .soloCentrar{
+
+        p{
+            font-size: 10px;
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .primeraYTerceraTabla {
+        padding: 10px;
+        margin: 10px auto;
+
+        .fila {
+            gap: 10px;
+
+            .columnaTexto {
+                padding: 10px; 
+
+                h2 {
+                    font-size: 20px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .segundaTabla{
+        
+        div{
+            margin: 20px;
+
+            p{
+                font-size: 14px;
+
+                span {
+                    font-size: 20px; 
+                    margin-right: 5px; 
+                }
+            }
+        }
+    }
+
+    .soloCentrar{
+
+        p{
+            font-size: 10px;
+        }
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+    .primeraYTerceraTabla {
+        padding: 15px;
+        margin: 20px auto;
+
+        .fila {
+
+            .columnaTexto {
+                padding: 15px; 
+
+                h2 {
+                    font-size: 24px;
+                }
+
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .segundaTabla{
+        
+        div{
+            margin: 25px;
+
+            p{
+                font-size: 16px;
+
+                span {
+                    font-size: 24px; 
+                }
+            }
+        }
+    }
+
+    .soloCentrar{
+
+        p{
+            font-size: 14px;
+        }
+    }
+}

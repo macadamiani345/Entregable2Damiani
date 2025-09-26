@@ -21,7 +21,13 @@
 @import "./components/tablasConoce";
 @import "./components/titulos";
 @import "./components/tutoriales";
-@import "./components/ubicacion";
+@import "./components/ubicacionTienda";
 
 /*llamamos a la carpeta mediaQ*/
-@import "./mediaQ/_media";
+@import "./mediaQ/mediaHeaderyFooter";
+@import "./mediaQ/mediaCarrito";
+@import "./mediaQ/mediaConoce";
+@import "./mediaQ/mediaIndex";
+@import "./mediaQ/mediaTienda";
+@import "./mediaQ/mediaTutoriales";
+

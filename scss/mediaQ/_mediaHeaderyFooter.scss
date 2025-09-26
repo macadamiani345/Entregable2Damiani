@@ -1,0 +1,147 @@
+@media (max-width: 500px) {
+    header{
+        p {
+            font-size: 12px;
+            padding: 7px;
+        }
+
+        .variosEncabezado{
+            padding: 8px;
+            margin: 4px;
+
+            .contenedor {
+                h1{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+
+                form{
+                    input{
+                    font-size: 10px;
+                    padding: 2px;
+                    }
+
+                    button {
+                        font-size: 8px;
+                        padding: 5px 5px;
+                    }
+                }
+
+                img {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+
+        nav{
+            padding: 3px;
+            ul li a{
+                font-size: 10px;
+            }
+        } 
+    }
+
+    footer{
+        margin-top: 5px;
+        padding: 0;
+        .footerContenedor{
+            .footerRow {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+
+                .footerCol {
+                    max-width: 100%; 
+                    padding: 5px;
+
+                    h2{
+                        font-size: 10px;
+                    }
+
+                    p{
+                        font-size: 8px;
+                    }
+
+                    form{
+                        flex-direction: row;
+                        gap: 5px;
+                        margin-top: 5px;
+
+                        input[type="email"] {
+                            padding: 5px;
+                            font-size: 6px;
+                        }
+
+                        button[type="submit"]{
+                            padding: 5px 5px;
+                            font-size: 7px;
+                        }
+                    }
+                }
+            }
+
+            .footerFinal{
+                padding-top: 5px;
+                p{
+                    font-size: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+    header{
+        p {
+            padding: 8px;
+        }
+
+    }
+    
+    footer{
+        padding: 0;
+        .footerContenedor{
+            .footerRow {
+                .footerCol {
+                    max-width: 100%; 
+                    padding: 5px;
+
+                    h2{
+                        font-size: 15px;
+                    }
+
+                    p{
+                        font-size: 11px;
+                    }
+
+                    form{
+                        flex-direction: row;
+                        gap: 5px;
+                        margin-top: 5px;
+
+                        input[type="email"] {
+                            padding: 5px;
+                            font-size: 6px;
+                        }
+
+                        button[type="submit"]{
+                            padding: 5px;
+                            font-size: 6px;
+                        }
+                    }
+                }
+            }
+
+            .footerFinal{
+                padding-top: 12px;
+                p{
+                    font-size: 9px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
