@@ -1,181 +1,167 @@
 const productos = {
     base: [
-        { marca: "Charlotte Tilbury" , nombre: "Flawless Filter Charlotte Tilbury", precio: 49.00 },
-        { marca: "Charlotte Tilbury", nombre: "Airbrush Flawless Charlotte Tilbury", precio: 49.00 },
-        { marca: "Dior Beauty", nombre: "Backstage Face & Body Dior", precio: 45.00 },
-        { marca: "Dior Beauty", nombre: "Forever Skin Perfect 24H Multi-Use Dior", precio: 57.00 },
-        { marca: "Make Up by Mario", nombre: "SurrealSkin® Luminous Hydrating By Mario", precio: 48.00 },
-        { marca: "Patrick Ta", nombre: "Major Skin Crème Foundation and Finishing Powder Duo", precio: 52.00 },
-        { marca: "Rare Beauty", nombre: "Positive Light Tinted Rare Beauty", precio: 30.00 }
+        { marca: "Charlotte Tilbury" , nombre: "Base Flawless Filter", precio: 49.00 },
+        { marca: "Charlotte Tilbury", nombre: "Base Airbrush Flawless", precio: 49.00 },
+        { marca: "Dior Beauty", nombre: "Base Backstage Face & Body", precio: 45.00 },
+        { marca: "Dior Beauty", nombre: "Base Forever Skin Perfect 24H Multi-Use", precio: 57.00 },
+        { marca: "Make Up by Mario", nombre: "Base SurrealSkin® Luminous Hydrating", precio: 48.00 },
+        { marca: "Patrick Ta", nombre: "Base Major Skin Crème Duo", precio: 52.00 },
+        { marca: "Rare Beauty", nombre: "Tinta Positive Light", precio: 30.00 }
     ],
     bronzer: [
-        { marca: "Charlotte Tilbury", nombre: "Beautiful Skin Sun-Kissed Glow Cream Charlotte Tilbury", precio: 58.00 },
-        { marca: "Dior Beauty", nombre: "Forever Nude Jumbo Dior", precio: 54.00 },
-        { marca: "Make Up by Mario", nombre: "SoftSculpt® Cream Contour & Bronzer Shaping Stick®", precio: 34.00 },
-        { marca: "Make Up by Mario", nombre: "SoftSculpt Transforming Skin Enhancer®", precio: 34.00 },
-        { marca: "Make Up by Mario", nombre: "Softsculpt® Multi-Use Bronzing & Shaping Serum with Hyaluronic Acid", precio: 36.00 },
-        { marca: "Rare Beauty", nombre: "Warm Wishes Effortless Cream Rare Beauty", precio: 28.00 },
-        { marca: "Rare Beauty", nombre: "Soft Pinch Liquid Rare Beauty", precio: 28.00 }
+        { marca: "Charlotte Tilbury", nombre: "Bronzer en Crema Beautiful Skin Sun-Kissed Glow", precio: 58.00 },
+        { marca: "Dior Beauty", nombre: "Bronzer Forever Nude Jumbo", precio: 54.00 },
+        { marca: "Make Up by Mario", nombre: "Contorno y Bronzer en Crema SoftSculpt® Shaping Stick®", precio: 34.00 },
+        { marca: "Make Up by Mario", nombre: "Bronzer Softsculpt® Multi-Use Shaping Serum", precio: 36.00 },
+        { marca: "Rare Beauty", nombre: "Bronzer en Crema Warm Wishes Effortless", precio: 28.00 },
+        { marca: "Rare Beauty", nombre: "Bronzer Soft Pinch Liquid", precio: 28.00 }
     ],
     corrector: [
-        { marca: "Charlotte Tilbury", nombre: "Beautiful Skin Medium to Full Coverage Charlotte Tilbury", precio: 33.00 },
-        { marca: "Dior Beauty", nombre: "Forever Skin Correct Full-Coverage Dior", precio: 42.00 },
-        { marca: "Dior Beauty", nombre: "Backstage Dior", precio: 33.00 },
-        { marca: "Make Up by Mario", nombre: "SurrealSkin® Awakening By Mario", precio: 29.00 },
-        { marca: "Rare Beauty", nombre: "Liquid Touch Brightening Rare Beauty", precio: 24.00 }
+        { marca: "Charlotte Tilbury", nombre: "Corrector Beautiful Skin Medium to Full Coverage", precio: 33.00 },
+        { marca: "Dior Beauty", nombre: "Corrector Forever Skin Correct Full-Coverage", precio: 42.00 },
+        { marca: "Dior Beauty", nombre: "Corrector Backstage", precio: 33.00 },
+        { marca: "Make Up by Mario", nombre: "Corrector SurrealSkin™ Awakening", precio: 29.00 },
+        { marca: "Rare Beauty", nombre: "Corrector Líquido Touch Brightening", precio: 24.00 }
     ],
     rubor: [
-        { marca: "Charlotte Tilbury", nombre: "Matte Beauty Charlotte Tilbury", precio: 42.00 },
-        { marca: "Dior Beauty", nombre: "Rosy Glow Powder Dior", precio: 42.00 },
-        { marca: "Make Up by Mario", nombre: "Soft Pop Cream Blush Stick", precio: 34.00 },
-        { marca: "Make Up by Mario", nombre: "Soft Pop Powder Blush", precio: 32.00 },
-        { marca: "Make Up by Mario", nombre: "Soft Pop Plumping Cream Blush Veil", precio: 34.00 },
-        { marca: "Patrick Ta", nombre: "Major Headlines Double-Take Crème & Powder Patrick Ta", precio: 38.00 },
-        { marca: "Rare Beauty", nombre: "Soft Pinch Liquid Rare Beauty", precio: 25.00 },
-        { marca: "Rare Beauty", nombre: "Stay Vulnerable Melting Cream Rare Beauty", precio: 24.00 }
+        { marca: "Charlotte Tilbury", nombre: "Rubor Matte Beauty", precio: 42.00 },
+        { marca: "Dior Beauty", nombre: "Rubor en Polvo Rosy Glow", precio: 42.00 },
+        { marca: "Make Up by Mario", nombre: "Rubor en Stick Soft Pop Cream", precio: 34.00 },
+        { marca: "Make Up by Mario", nombre: "Rubor en Polvo Soft Pop", precio: 32.00 },
+        { marca: "Make Up by Mario", nombre: "Rubor en Crema Soft Pop Plumping", precio: 34.00 },
+        { marca: "Rare Beauty", nombre: "Rubor Líquido Soft Pinch", precio: 25.00 },
+        { marca: "Rare Beauty", nombre: "Rubor en Crema Stay Vulnerable Melting", precio: 24.00 }
     ],
     sombras: [
-        { marca: "Charlotte Tilbury", nombre: "Luxury Eyeshadow Palette Charlotte Tilbury", precio: 55.00 },
-        { marca: "Dior Beauty", nombre: "Diorshow 5 Couleurs Couture Eyeshadow Palette Dior", precio: 72.00 },
-        { marca: "Make Up by Mario", nombre: "Master Mattes® Eyeshadow Palette By Mario", precio: 56.00 },
-        { marca: "Patrick Ta", nombre: "Major Dimension III Matte Eyeshadow Palette Patrick Ta", precio: 70.00 },
-        { marca: "Patrick Ta", nombre: "Major Dimension Eye Illusion Eyeshadow Duo", precio: 42.00 },
+        { marca: "Charlotte Tilbury", nombre: "Paleta de Sombras Luxury Eyeshadow", precio: 55.00 },
+        { marca: "Dior Beauty", nombre: "Paleta de Sombras Diorshow 5 Couleurs Couture", precio: 72.00 },
+        { marca: "Make Up by Mario", nombre: "Paleta de Sombras Master Mattes®", precio: 56.00 },
+        { marca: "Patrick Ta", nombre: "Paleta de Sombras Major Dimension III Matte", precio: 70.00 },
+        { marca: "Patrick Ta", nombre: "Sombras Major Dimension Eye Illusion", precio: 42.00 },
     ]
 };
 
-//
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-function mostrarMensaje(texto) {
-    let mensaje = document.createElement("div");
-    mensaje.className = "mensaje-carrito";
-    mensaje.innerText = texto;
-
-    document.body.appendChild(mensaje);
-
-    setTimeout(() => {
-        mensaje.remove();
-    }, 5000);
-}
 
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-//actualiza el contador en el ícono
-function actualizarContadorCarrito() {
+function actualizarContador() {
     const contador = document.getElementById("contadorCarrito");
     if (contador) {
-        const totalItems = carrito.reduce((sum, p) => sum + p.cantidad, 0);
-        contador.innerText = totalItems;
+        let total = 0;
+        carrito.forEach(item => total += item.cantidad);
+        contador.textContent = total;
     }
 }
 
-//agrega un producto al carrito
 function agregarProducto(nombre, precio) {
-    const productoExistente = carrito.find(p => p.nombre === nombre);
-    if (productoExistente) {
-        productoExistente.cantidad++;
+    let encontrado = carrito.find(item => item.nombre === nombre);
+    if (encontrado) {
+        encontrado.cantidad++;
     } else {
         carrito.push({ nombre, precio, cantidad: 1 });
     }
     guardarCarrito();
-    actualizarContadorCarrito();
-
-    if (document.getElementById("listaCarrito")) {
-        mostrarCarrito();
-    }
-    
-    mostrarMensaje(`${nombre} agregado al carrito 🛒`);
+    actualizarContador();
+    mostrarCarrito();
 }
 
-//muestra el carrito en carrito.html
 function mostrarCarrito() {
     const lista = document.getElementById("listaCarrito");
-    const total = document.getElementById("totalCarrito");
-    if (!lista || !total) return;
+    const totalCarrito = document.getElementById("totalCarrito");
+
+    if (!lista || !totalCarrito) return;
 
     lista.innerHTML = "";
     let suma = 0;
 
-    carrito.forEach((p, index) => {
-        suma += p.precio * p.cantidad;
+    carrito.forEach((item, index) => {
+        suma += item.precio * item.cantidad;
+
         const li = document.createElement("li");
-        li.innerHTML = `
-            ${p.nombre} - $${p.precio} x ${p.cantidad}
-            <button onclick="eliminarProducto(${index})">-</button>
-            <button onclick="agregarProductoCarrito(${index})">+</button>
-        `;
+        li.textContent = `${item.nombre} - $${item.precio.toFixed(2)} x ${item.cantidad} `;
+
+        const btnMenos = document.createElement("button");
+        btnMenos.textContent = "-";
+        btnMenos.addEventListener("click", () => eliminarProducto(index));
+
+        const btnMas = document.createElement("button");
+        btnMas.textContent = "+";
+        btnMas.addEventListener("click", () => aumentarProducto(index));
+
+        li.appendChild(btnMenos);
+        li.appendChild(btnMas);
         lista.appendChild(li);
     });
 
-    total.innerText = "Total: $" + suma.toFixed(2);
+    totalCarrito.textContent = `Total: $${suma.toFixed(2)}`;
 }
 
-// resta un producto o elimina si queda en 0
-function eliminarProducto(indice) {
-    if (carrito[indice].cantidad > 1) {
-        carrito[indice].cantidad--;
+function eliminarProducto(index) {
+    if (carrito[index].cantidad > 1) {
+        carrito[index].cantidad--;
     } else {
-        carrito.splice(indice, 1);
+        carrito.splice(index, 1);
     }
     guardarCarrito();
     mostrarCarrito();
-    actualizarContadorCarrito();
+    actualizarContador();
 }
 
-// suma un producto directamente en carrito.html
-function agregarProductoCarrito(indice) {
-    carrito[indice].cantidad++;
+function aumentarProducto(index) {
+    carrito[index].cantidad++;
     guardarCarrito();
     mostrarCarrito();
-    actualizarContadorCarrito();
+    actualizarContador();
 }
 
-//vacia el carrito completo
-function configurarVaciarCarrito() {
-    const vaciarBtn = document.getElementById("vaciarCarrito");
-    if (vaciarBtn) {
-        vaciarBtn.addEventListener("click", () => {
-            carrito = [];
-            guardarCarrito();
-            mostrarCarrito();
-            actualizarContadorCarrito();
-        });
+function vaciarCarrito() {
+    carrito = [];
+    guardarCarrito();
+    mostrarCarrito();
+    actualizarContador();
+}
+
+function comprar() {
+    const mensaje = document.getElementById("mensajeCompra");
+    if (!mensaje) return;
+
+    if (carrito.length === 0) {
+        mensaje.textContent = "Tu carrito está vacío.";
+    } else {
+        carrito = [];
+        guardarCarrito();
+        mostrarCarrito();
+        actualizarContador();
+        mensaje.textContent = "¡Gracias por tu compra!";
     }
 }
 
-//compra el carrito
-function configurarCompra() {
-    const comprarBtn = document.querySelector("button.comprar");
-    if (comprarBtn) {
-        comprarBtn.addEventListener("click", () => {
-            if (carrito.length === 0) {
-                mostrarMensaje("Tu carrito está vacío 😅");
-            } else {
-                carrito = [];
-                guardarCarrito();
-                mostrarCarrito();
-                actualizarContadorCarrito();
-                alert("¡Gracias por tu compra! 🛒✨");
-            }
-        });
-    }
-}
-
-//inicialización
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".agregarProductoCarrito").forEach(boton => {
-        boton.addEventListener("click", (e) => {
+    mostrarCarrito();
+    actualizarContador();
+
+    const btnVaciar = document.getElementById("vaciarCarrito");
+    if (btnVaciar) btnVaciar.addEventListener("click", vaciarCarrito);
+
+    const btnComprar = document.getElementById("comprar");
+    if (btnComprar) btnComprar.addEventListener("click", comprar);
+
+    const botones = document.querySelectorAll(".agregarProductoCarrito");
+    botones.forEach(btn => {
+        btn.addEventListener("click", e => {
             const item = e.target.closest(".item");
-            const nombre = item.querySelector(".nombre").innerText;
-            const precio = parseFloat(item.querySelector(".precio").innerText.replace("$", ""));
+            if (!item) return;
+
+            const nombreElem = item.querySelector(".nombre");
+            const precioElem = item.querySelector(".precio");
+            if (!nombreElem || !precioElem) return;
+
+            const nombre = nombreElem.textContent.trim();
+            const precio = parseFloat(precioElem.textContent.replace("$", "").trim());
             agregarProducto(nombre, precio);
         });
     });
-
-    mostrarCarrito();
-    configurarVaciarCarrito();
-    configurarCompra();
-    actualizarContadorCarrito();
 });

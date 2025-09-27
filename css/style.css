@@ -347,6 +347,10 @@ footer .footerFinal {
 .resumenCompra .totalCompraCarrito #comprar:hover {
   background: rgb(239.8421052632, 162.1578947368, 179.2105263158);
 }
+.resumenCompra #mensajeCompra {
+  margin-top: 20px;
+  font-weight: bold;
+}
 
 .productosExtrasCarrito {
   font-size: 20px;
